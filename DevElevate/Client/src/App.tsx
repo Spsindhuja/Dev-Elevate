@@ -28,6 +28,7 @@ function AppContent() {
     setLoading(true);
     // Simulate loading delay (replace with actual data fetching if needed)
     const timer = setTimeout(() => setLoading(false), 500);
+    window.scrollTo(0, 0); // Scroll to top on route change
     return () => clearTimeout(timer);
   }, [location]);
 

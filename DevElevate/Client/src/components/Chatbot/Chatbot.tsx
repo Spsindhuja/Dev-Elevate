@@ -44,6 +44,10 @@ const Chatbot: React.FC = () => {
     scrollToBottom();
   }, [state.chatHistory]);
 
+  useEffect(() => {
+    window.scrollTo(0, 0); // Ensure scroll to top on entering Study Buddy
+  }, []);
+
   const simulateAIResponse = (userMessage: string): string => {
     const responses = {
       learning: {
